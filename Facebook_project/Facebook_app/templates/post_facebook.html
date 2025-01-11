@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post  To Facebook</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Post Your Images To Your Facebook Page</h1><hr>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Image: <input type="file" name="image"></label><br><br>
+        <label>Caption: <input type="text" name="caption"></label><br><br>
+        <button type="submit">Post To Your Page</button>
+
+    </form>
+</body>
+</html>
